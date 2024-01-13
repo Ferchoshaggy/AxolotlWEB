@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Golos Text', sans-serif;
+}
+
+.inicio {
+
+    width: 100%;
+    height: 600px;
+    background: #ff00cc;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3333999c, #ff00cc4b), url(/img/libre.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3333999c, #ff00cc4b), url(/img/libre.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-around;
+    transition: 1s;
+    padding: 5px 5px;
+    z-index: 10;
+}
+
+.nav-link{
+  color: #fff !important;
+}
+
+header nav>ul li a {
+    color: #fff ;
+    font-weight: 300 ;
+    text-decoration: none ;
+    margin-right: 10px ;
+}
+
+header nav>ul li a:hover {
+
+    text-decoration: underline;
+
+}
+
+.textos-header {
+
+    color: #fff;
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.textos-header h1 {
+
+    font-size: 60px;
+    color: #fff;
+}
+
+.textos-header h2 {
+
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 2 px;
+    transition: 1s;
+}
+
+header .axo {
+    margin: 0;
+    height: 60px;
+    width: 250px;
+}
+
+header .logo {
+    position: relative;
+    color: #ffffff00;
+    font-size: 30PX;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 1s;
+    text-decoration: none;
+}
+
+
+header.abajo {
+    background: #ffffff !important;
+    box-shadow: 5px 0 10px !important;
+    padding: 15px 20px !important;
+}
+
+
+header.abajo ul li a {
+    color: #757575;
+}
+
+header.abajo .logo {
+    color: #757575;
+}
+
+.resumen {
+    justify-content: space-around;
+    text-align: center;
+    color: #757575;
+    padding: 5em;
+}
+
+.resumen h3 {
+    text-align: center;
+    color: #e80ce8cc;
+    font-size: 35px;
+}
+
+.resumen p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.nosotros {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.nosotros .textoswe h1 {
+
+    font-size: 45px;
+    color: #e80ce8cc
+}
+
+.nosotros .textoswe h2 {
+
+    font-size: 40px;
+    color: #757575;
+}
+
+.nosotros .imagenwe {
+    left: 0;
+    height: 100%;
+
+}
+
+ .comenzar{
+    margin-top: 60px;
+    border: 0;
+    background-image: linear-gradient(150deg,
+            #3333999c,
+            #e80ce8);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.enviarForm {
+    border: 0;
+    background-image: linear-gradient(150deg,
+            #3333999c,
+            #e80ce8);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.comenzar span, .enviarForm span{
+    font-size: 20px;
+    background-color: #3333999c;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.comenzar:hover span, .enviarForm:hover span{
+    background: none;
+}
+.comenzar:active, .enviarForm:active{
+    transform: scale(0.9);
+}
+
+.campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #e80ce8cc;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    max-width: 580px;
+
+}
+
+.servicios {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.servicios .textoser {
+    text-align: center;
+}
+
+.servicios .textoser h2 {
+    font-size: 30px;
+    font-weight: 200;
+    color: #757575;
+}
+
+.servicios .textoser h1 {
+    font-size: 40px;
+    font-weight: 200;
+    color: #e80ce8cc
+}
+
+.wavedos {
+
+    width: 100%;
+    height: 200px;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.wave2 {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.servicios2 {
+
+    background: #0d1117;
+    height: 2900px;
+}
+
+.servicios2 h1 {
+
+    color: #fff;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.uno {
+    margin-top: 50px;
+
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+    justify-content: space-around;
+    display: flex;
+
+}
+
+.unouno h2 {
+
+    margin-top: 150px;
+    font-weight: 300;
+    text-align: right;
+    font-size: 30px;
+}
+
+.unouno h1 {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 15px;
+}
+
+.dos {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+    justify-content: space-around;
+    display: flex;
+
+}
+
+.dosdos h2 {
+
+    margin-top: 150px;
+    font-weight: 300;
+    text-align: left;
+    font-size: 30px;
+}
+
+.dosdos h1 {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.tres {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+
+}
+
+.trestres h2 {
+
+    margin-top: 150px;
+    font-weight: 300;
+    text-align: right;
+    font-size: 30px;
+}
+
+.trestres h1 {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 15px;
+}
+
+.cuatro {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+
+
+}
+
+.cuatrocuatro h2 {
+    border-style: solid;
+    margin-top: 150px;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.comencemos {
+    margin-top: 50px;
+    height: 400px;
+}
+
+.cinco {
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
