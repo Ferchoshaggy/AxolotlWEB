@@ -184,7 +184,7 @@ header.abajo .logo {
 
 }
 
- .comenzar{
+ .comenzar, .contacto form .enviar{
     margin-top: 60px;
     border: 0;
     background-image: linear-gradient(150deg,
@@ -211,7 +211,7 @@ header.abajo .logo {
     transition: .3s;
 }
 
-.comenzar span, .enviarForm span{
+.comenzar span, .enviarForm span, .contacto form .enviar span{
     font-size: 20px;
     background-color: #3333999c;
     padding: 16px 24px;
@@ -391,4 +391,19 @@ header.abajo .logo {
     display: flex;
     justify-content: space-evenly;
 
+}
+
+.contacto {
+  
+    display: flex;
+    justify-content: space-around;
+    height: 600px;
+    margin: 0;
+    padding: 5em;
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50;
+    margin-top: 100px;
 }
