@@ -13,9 +13,9 @@ body {
     height: 600px;
     background: #ff00cc;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3333999c, #ff00cc4b), url(/img/libre.jpg);
+    background: -webkit-linear-gradient(to right, #3333999c, #ff00cc4b), url("/img/libre.jpg");
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3333999c, #ff00cc4b), url(/img/libre.jpg);
+    background: linear-gradient(to right, #3333999c, #ff00cc4b), url("/img/libre.jpg");
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
@@ -118,7 +118,7 @@ header .axo {
 header .logo {
     position: relative;
     color: #ffffff00;
-    font-size: 30PX;
+    font-size: 25PX;
     font-weight: bold;
     letter-spacing: 2px;
     transition: 1s;
@@ -127,14 +127,14 @@ header .logo {
 
 
 header.abajo {
-    background: #ffffff !important;
-    box-shadow: 5px 0 10px !important;
-    padding: 15px 20px !important;
+    background: #ffffff ;
+    box-shadow: 5px 0 10px ;
+    padding: 15px 20px ;
 }
 
 
 header.abajo ul li a {
-    color: #757575;
+    color: #757575 !important;
 }
 
 header.abajo .logo {
@@ -184,8 +184,9 @@ header.abajo .logo {
 
 }
 
- .comenzar, .contacto form .enviar{
-    margin-top: 60px;
+.nosotros .textoswe .comenzar,
+.contacto form .enviar{
+    
     border: 0;
     background-image: linear-gradient(150deg,
             #3333999c,
@@ -196,6 +197,25 @@ header.abajo .logo {
     padding: 4px;
     cursor: pointer;
     transition: .3s;
+}
+
+.nosotros .textoswe .comenzar span, 
+.enviarForm span, 
+.contacto form .enviar span{
+    font-size: 20px;
+    background-color: #3333999c;
+    padding: 16px 24px;
+    transition: .3s;
+}
+
+.contacto form .enviar:hover span,
+.nosotros .textoswe .comenzar:hover span, 
+.enviarForm:hover span {
+    background: none;
+}
+.nosotros .textoswe .comenzar:active, 
+.enviarForm:active{
+    transform: scale(0.9);
 }
 
 .enviarForm {
@@ -211,19 +231,19 @@ header.abajo .logo {
     transition: .3s;
 }
 
-.comenzar span, .enviarForm span, .contacto form .enviar span{
-    font-size: 20px;
-    background-color: #3333999c;
-    padding: 16px 24px;
-    border-radius: 6px;
+.comenzar2{
+    font-size: 25px;
+    border: 0;
+    background-image: linear-gradient(150deg,
+            #3333999c,
+            #e80ce8);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    padding: 4px;
+    cursor: pointer;
     transition: .3s;
-}
 
-.comenzar:hover span, .enviarForm:hover span{
-    background: none;
-}
-.comenzar:active, .enviarForm:active{
-    transform: scale(0.9);
 }
 
 .campo, textarea{
@@ -277,7 +297,7 @@ header.abajo .logo {
 .servicios2 {
 
     background: #0d1117;
-    height: 2900px;
+    height: 3000px;
 }
 
 .servicios2 h1 {
@@ -402,8 +422,106 @@ header.abajo .logo {
     padding: 5em;
     box-sizing: border-box;
     width: 100%;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50;
     margin-top: 100px;
 }
+
+.contacto h2 {
+    margin-bottom: 15px;
+    font-size: 35px;
+    color: #e80ce8cc;
+}
+
+.contacto p {
+    text-align: justify;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 530px;
+}
+
+.contacto a {
+    font-size: 17px;
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #0d1117;
+    font-weight: 700;
+}
+
+.contacto a i {
+
+    color: #e80ce8cc;
+    margin-right: 10px;
+
+}
+
+.contacto form .campo {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #e80ce8cc;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    max-width: 580px;
+
+}
+
+.contacto form textarea{
+    margin-bottom: 0;
+}
+
+
+
+.contacto form .enviar{
+    margin-top: 25px;
+}
+
+
+/* css de tecnologias */
+
+.tecnologias h1{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    color: #757575;
+}
+
+.slider{
+    width: 80vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+} 
+
+.slider .slide-track{
+    display: flex;
+    animation: scroll 35s linear infinite;
+    -webkit-animation: scroll 35s linear infinite;
+    width: calc(1000px * 28);
+
+}
+
+.slider .slide{
+    width: 200px;
+}
+
+.slider .slide img{
+    width: 100%;
+}
+
+@keyframes scroll{
+    0%{
+        -webkit-transform:translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform:translateX(calc(-200px * 14));
+        transform: translateX(-200px * 14);
+    }
+}
+
