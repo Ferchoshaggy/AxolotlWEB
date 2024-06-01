@@ -8,7 +8,7 @@
     <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/css/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Incluir jQuery -->
      <title>AXOLOTL SOFTWARE</title>
      <link rel="shortcut icon" href="img/LOGO AXOLOTL 123.png" type="image/x-icon">
 
@@ -68,7 +68,6 @@
         </svg></div>
 </section>
 
-
 <div class="container">
 <section class="resumen">
     <h3> Tenemos para ti</h3>
@@ -77,7 +76,6 @@
         nuevo estándar a la empresa sin perdidas en el proceso.</p>
 </section>
 </div>
-
 
 <div class="container">
 <section class="nosotros" id="nosotros">
@@ -99,7 +97,8 @@
         <!-- Modal -->
 <div class="modal fade" id="ModalNosotros" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+        <form action="/Php/procesoDeDatos.php" method="POST" class="formData">  
+      <div class="modal-content">   
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Cuentanos</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -107,9 +106,9 @@
         <div class="modal-body">
             <div class="card-body secciones_body">
                 <div class="row">
-           <div class="mb-3"><input class="form-control campo" type="text" name="nombre" placeholder="Tu nombre o el de tu empresa"></div>
-           <div class="mb-3"> <input class="form-control campo" type="email" name="correro" placeholder="E-mail"></div>
-           <div class="mb-3"><input class="form-control campo" type="tel" name="nombre" placeholder="Telefono de contacto"></div>
+           <div class="mb-3"><input class="form-control campo" type="text" name="nombre" required placeholder="Tu nombre o el de tu empresa"></div>
+           <div class="mb-3"> <input class="form-control campo" type="email" name="correo" required placeholder="E-mail"></div>
+           <div class="mb-3"><input class="form-control campo" type="tel" name="telefono"  pattern="[0-9]{12}" required placeholder="Telefono de contacto"></div>
            <div class="mb-3"><textarea class="form-control campo" name="mensaje" placeholder="Dejanos un mensaje"></textarea></div>
 </div>
 </div>
@@ -123,10 +122,10 @@
             </button>
         </div>
       </div>
+    </form>  
     </div>
   </div>
     </div>
-
 </div>
 
 <div class="col-md-6">
@@ -162,8 +161,6 @@
     </section>
 </div>
 
-
-
 <section class="wavedos">
     <div class="wave2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
             preserveAspectRatio="none" style="height: 100%; width: 100%;">
@@ -171,7 +168,6 @@
                 style="stroke: none; fill: #0d1117;"></path>
         </svg></div>
 </section>
-
 
 <section class="servicios2">
     <h1>Como iniciar</h1>
@@ -323,7 +319,6 @@
     </section>
 </div>
 
-
 <div class="container">
 <section class="contacto" id="contacto">
     <div class="card-body secciones_body">
@@ -339,17 +334,17 @@
                      estamos comprometidos a ofrecer soluciones de desarrollo web de alta calidad que impulsen el éxito de nuestros clientes
                      en el mundo digital. En este emocionante viaje de crecimiento, estamos listos para colaborar 
                      contigo y hacer realidad tus ideas digitales.</p>
-                    <a href="https://api.whatsapp.com/?phone=5518661093"><i class="bi bi-whatsapp"></i>
+                    <a href="https://api.whatsapp.com/send?phone=5518661093"><i class="bi bi-whatsapp"></i>
                         5518661093</a>
                     <a href="mailto:axolotlsoftware.dev@gmail.com"><i class="bi bi-envelope-at"></i>
                         axolotlsoftware.dev@gmail.com</a>
                 </div>
             </div>
             <div class="col-md-5">
-                <form action="#" autocomplete="off">
-                    <input type="text" name="nombre" placeholder="Tu nombre o el de tu empresa" class="campo form-control">
-                    <input type="email" name="correro" placeholder="E-mail" class="campo form-control">
-                    <input type="tel" name="telefono" placeholder="Telefono de contacto" class="campo form-control">
+                <form action="/Php/procesoDeDatos.php" method="post" class="formData">
+                    <input type="text" name="nombre" required placeholder="Tu nombre o el de tu empresa" class="campo form-control">
+                    <input type="email" name="correo" required placeholder="E-mail" class="campo form-control">
+                    <input type="tel" name="telefono" required placeholder="Telefono de contacto"  pattern="[0-9]{12}" class="campo form-control">
                     <textarea name="mensaje" placeholder="Dejanos un mensaje" class="campo form-control"></textarea>
                     <button class="enviar btn" type="submit" style="width: 100%;">
                         <span style="width: 100%;">
@@ -361,9 +356,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 </section>
 
@@ -378,5 +370,34 @@
         })
 </script>
 <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>   
+
+<script>
+$(document).ready(function(){
+    $('.formData').submit(function(event) {
+        event.preventDefault(); // Prevenir el envío normal del formulario
+        
+        // Obtener los datos del formulario
+        var formData = $(this).serialize();
+        
+        // Enviar la solicitud AJAX
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: formData,
+            success: function(response) {
+               alert("Formulario enviado con exito");
+               $('.formData').trigger('reset');
+                
+    
+            },
+            error: function(xhr, status, error) {
+                // Mostrar un mensaje de error si la solicitud no fue exitosa
+                console.error('Error al enviar el formulario');
+            }
+        });
+    });
+});
+</script>
+
 </body>
 </html>
