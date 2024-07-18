@@ -118,7 +118,7 @@
                                                     <div class="mb-3"> <input class="form-control campo" type="email"
                                                             name="correo" required placeholder="E-mail"></div>
                                                     <div class="mb-3"><input class="form-control campo" type="tel"
-                                                            name="telefono" pattern="[0-9]{12}" required
+                                                            name="telefono" pattern="[0-9]{10}" required
                                                             placeholder="Telefono de contacto"></div>
                                                     <div class="mb-3"><textarea class="form-control campo"
                                                             name="mensaje" placeholder="Dejanos un mensaje"></textarea>
@@ -384,7 +384,7 @@
                             class="campo form-control">
                         <input type="email" name="correo" required placeholder="E-mail" class="campo form-control">
                         <input type="tel" name="telefono" required placeholder="Telefono de contacto"
-                            pattern="[0-9]{12}" class="campo form-control">
+                            pattern="[0-9]{10}" class="campo form-control">
                         <textarea name="mensaje" placeholder="Dejanos un mensaje" class="campo form-control"></textarea>
                         <button class="enviar btn" type="submit" style="width: 100%;">
                             <span style="width: 100%;">
