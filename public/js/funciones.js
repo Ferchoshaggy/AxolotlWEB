@@ -1,11 +1,16 @@
+AOS.init({
+    easing: 'ease-in-out-sine'
+});
+
+
 var push = false;
 
 window.addEventListener("scroll", function () {
-    
+
     var header = document.querySelector("header");
     if (push || window.scrollY > 0) {
         header.classList.add("abajo");
-    }else{
+    } else {
         header.classList.remove("abajo");
     }
 
@@ -50,7 +55,7 @@ document.getElementById("but_001").addEventListener("click", () => {
     if (push || window.scrollY > 0) {
         var header = document.querySelector("header");
         header.classList.add("abajo");
-    }else{
+    } else {
         var header = document.querySelector("header");
         header.classList.remove("abajo");
     }

@@ -6,23 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/estilos.css">
+    <link rel="stylesheet" href="./public/css/estilos.css">
+    <link rel="stylesheet" href="./public/css/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Incluir jQuery -->
-    <title>AXOLOTL SOFTWARE</title>
-    <link rel="shortcut icon" href="img/LOGO AXOLOTL 123.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
-        integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>AXOLOTL SOFTWARE</title>
+    <link rel="shortcut icon" href="img/LOGO AXOLOTL 123.png" type="image/x-icon">
 
 </head>
 
@@ -59,9 +55,12 @@
 
 <section class="inicio" id="inicio">
     <section class="textos-header">
-        <img src="img/LOGO AXOLOTL redes.png" width="200" height="200">
-        <h1>AXOLOTL SOFTWARE</h1>
-        <H2>Herramientas a la medida de tus necesidades</H2>
+        <img src="img/LOGO AXOLOTL redes.png" width="200" height="200" data-aos="fade-up" data-aos-duration="1500">
+        <div data-aos="zoom-in-up" data-aos-duration="3000">
+            <h1>AXOLOTL SOFTWARE</h1>
+            <H2>Herramientas a la medida de tus necesidades</H2>
+        </div>
+
     </section>
     <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
             style="height: 100%; width: 100%;">
@@ -81,7 +80,7 @@
 </section>
 
 
-<section class="nosotros" id="nosotros">
+<section class="nosotros" id="nosotros" data-aos="fade-up" data-aos-duration="1500">
     <div class="container-lg">
         <div class="card-body secciones_body">
             <div class="row">
@@ -151,7 +150,7 @@
 
 
 
-<section class="servicios" id="servicios">
+<section class="servicios" id="servicios" data-aos="fade-up" data-aos-duration="1500">
     <div class="container-lg">
         <div class="card-body secciones_body">
             <div class="row">
@@ -187,12 +186,12 @@
 
 <section class="servicios2">
     <div class="container-lg">
-        <h1>Como iniciar</h1>
+        <h1 data-aos="zoom-in-up" data-aos-duration="2000">Como iniciar</h1>
         <section class="uno">
-            <div class="card-body secciones_body">
+            <div class="card-body secciones_body"  data-aos="fade-up" data-aos-duration="2500">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="unouno">
+                        <div class="unouno" >
                             <h2>Cuentanos tu idea o tus necesidades </h2>
                             <h1>Cuales son los problemas administrativos que tiene tu empresa o negocio<br>o te gustaria
                                 tener tu
@@ -206,9 +205,9 @@
             </div>
         </section>
         <section class="dos">
-            <div class="card-body secciones_body">
+            <div class="card-body secciones_body" data-aos="fade-up" data-aos-duration="2500">
                 <div class="row img_bloc001">
-                    <div class="col-md-6">
+                    <div class="col-md-6" >
                         <img src="img/analisis.png" alt="" class="analisis img-fluid">
                     </div>
                     <div class="col-md-6">
@@ -220,9 +219,9 @@
                         </section>
                     </div>
                 </div>
-                <div class="row img_bloc001_1">
+                <div class="row img_bloc001_1" data-aos="fade-up" data-aos-duration="2500">
                     <div class="col-md-6">
-                        <section class="dosdos">
+                        <section class="dosdos" >
                             <h2>Analisis de la informacion</h2>
                             <h1>Nuestro equipo de expertos analizara tu informacion con el fin de hacerte<br>una
                                 propuesta que
@@ -237,9 +236,9 @@
             </div>
         </section>
         <section class="tres">
-            <div class="card-body secciones_body">
+            <div class="card-body secciones_body" data-aos="fade-up" data-aos-duration="2500">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" >
                         <div class="trestres">
                             <h2>Retroalimentacion </h2>
                             <h1>Uno de nustros expertos se comunicara contigo para darte solucion<br>brindandote datos
@@ -248,7 +247,7 @@
                                 y todos los acuerdo <br> necesarios para iniciar con tu proyecto </h1>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" >
                         <img src="img/retro.png" alt="" class="retro img-fluid">
                     </div>
                 </div>
@@ -256,21 +255,21 @@
 
         </section>
 
-        <section class="cuatro">
+        <section class="cuatro" data-aos="zoom-in-up" data-aos-duration="3000">
             <div class="cuatrocuatro">
                 <h2>Dejanoslo a nostros y comencemos</h2>
                 <img src="img/uno.png" alt="" class="comencemos img-fluid">
             </div>
         </section>
 
-        <section>
+        <section >
             <div class="row d-flex justify-content-center align-items-center h-100 text-center">
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 text-center"  data-aos="fade-top" data-aos-duration="1000">
                     <button data-bs-toggle="modal" data-bs-target="#ModalNosotros" class="comenzar2 btn">
                         <span>¡Comencemos!</span>
                     </button>
                 </div>
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 text-center" data-aos="fade-top" data-aos-duration="1000">
                     <a href="https://api.whatsapp.com/send?phone=5518661093" class="comenzar2 btn">
                         <span>¿Tienes dudas?</span>
                     </a>
@@ -403,16 +402,13 @@
 
     </footer>
 </div>
-<script type="text/javascript">
-
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+    integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script src="./public/js/aos.js"></script>
 <script src="./public/js/funciones.js"></script>
-<script>
-
-</script>
-
 </body>
 
 </html>
