@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/aos.css">
     <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/estilos.css">
-    <link rel="stylesheet" href="./public/css/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,47 +96,6 @@
                             data-bs-target="#ModalNosotros">
                             <span>Comenzar ahora</span>
                         </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="ModalNosotros" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <form action="/Php/procesoDeDatos.php" method="POST" class="formData">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Cuentanos</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="card-body secciones_body">
-                                                <div class="row">
-                                                    <div class="mb-3"><input class="form-control campo" type="text"
-                                                            name="nombre" required
-                                                            placeholder="Tu nombre o el de tu empresa"></div>
-                                                    <div class="mb-3"> <input class="form-control campo" type="email"
-                                                            name="correo" required placeholder="E-mail"></div>
-                                                    <div class="mb-3"><input class="form-control campo" type="tel"
-                                                            name="telefono" pattern="[0-9]{10}" required
-                                                            placeholder="Telefono de contacto"></div>
-                                                    <div class="mb-3"><textarea class="form-control campo"
-                                                            name="mensaje" placeholder="Dejanos un mensaje"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button class="enviarForm btn" type="submit">
-                                                <span>
-                                                    Enviar
-                                                </span>
-
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -188,10 +147,10 @@
     <div class="container-lg">
         <h1 data-aos="zoom-in-up" data-aos-duration="2000">Como iniciar</h1>
         <section class="uno">
-            <div class="card-body secciones_body"  data-aos="fade-up" data-aos-duration="2500">
+            <div class="card-body secciones_body" data-aos="fade-up" data-aos-duration="2500">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="unouno" >
+                        <div class="unouno">
                             <h2>Cuentanos tu idea o tus necesidades </h2>
                             <h1>Cuales son los problemas administrativos que tiene tu empresa o negocio<br>o te gustaria
                                 tener tu
@@ -207,7 +166,7 @@
         <section class="dos">
             <div class="card-body secciones_body" data-aos="fade-up" data-aos-duration="2500">
                 <div class="row img_bloc001">
-                    <div class="col-md-6" >
+                    <div class="col-md-6">
                         <img src="img/analisis.png" alt="" class="analisis img-fluid">
                     </div>
                     <div class="col-md-6">
@@ -221,7 +180,7 @@
                 </div>
                 <div class="row img_bloc001_1" data-aos="fade-up" data-aos-duration="2500">
                     <div class="col-md-6">
-                        <section class="dosdos" >
+                        <section class="dosdos">
                             <h2>Analisis de la informacion</h2>
                             <h1>Nuestro equipo de expertos analizara tu informacion con el fin de hacerte<br>una
                                 propuesta que
@@ -238,7 +197,7 @@
         <section class="tres">
             <div class="card-body secciones_body" data-aos="fade-up" data-aos-duration="2500">
                 <div class="row">
-                    <div class="col-md-6" >
+                    <div class="col-md-6">
                         <div class="trestres">
                             <h2>Retroalimentacion </h2>
                             <h1>Uno de nustros expertos se comunicara contigo para darte solucion<br>brindandote datos
@@ -247,7 +206,7 @@
                                 y todos los acuerdo <br> necesarios para iniciar con tu proyecto </h1>
                         </div>
                     </div>
-                    <div class="col-md-6" >
+                    <div class="col-md-6">
                         <img src="img/retro.png" alt="" class="retro img-fluid">
                     </div>
                 </div>
@@ -262,9 +221,9 @@
             </div>
         </section>
 
-        <section >
+        <section>
             <div class="row d-flex justify-content-center align-items-center h-100 text-center">
-                <div class="col-md-3 text-center"  data-aos="fade-top" data-aos-duration="1000">
+                <div class="col-md-3 text-center" data-aos="fade-top" data-aos-duration="1000">
                     <button data-bs-toggle="modal" data-bs-target="#ModalNosotros" class="comenzar2 btn">
                         <span>¡Comencemos!</span>
                     </button>
@@ -402,6 +361,48 @@
 
     </footer>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalNosotros" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/Php/procesoDeDatos.php" method="POST" class="formData">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Cuentanos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body secciones_body">
+                        <div class="row">
+                            <div class="mb-3"><input class="form-control campo" type="text" name="nombre" required
+                                    placeholder="Tu nombre o el de tu empresa"></div>
+                            <div class="mb-3"> <input class="form-control campo" type="email" name="correo" required
+                                    placeholder="E-mail"></div>
+                            <div class="mb-3"><input class="form-control campo" type="tel" name="telefono"
+                                    pattern="[0-9]{10}" required placeholder="Telefono de contacto"></div>
+                            <div class="mb-3"><textarea class="form-control campo" name="mensaje"
+                                    placeholder="Dejanos un mensaje"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="enviarForm btn" type="submit">
+                        <span>
+                            Enviar
+                        </span>
+
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
     integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
